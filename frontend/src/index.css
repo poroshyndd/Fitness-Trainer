@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg:   #f7f8fa;
+  --color-main: #222;
+  --color-accent: #ff5a5f;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-main);
+}
+
+/* Навигация */
+.navbar {
+  background: white;
+  box-shadow: var(--shadow);
+}
+.navbar .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.navbar .links a {
+  margin-right: 1em;
+  color: var(--color-main);
+  text-decoration: none;
+}
+.navbar .links a.active {
+  font-weight: 600;
+}
+.btn-logout {
+  background: var(--color-accent);
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: var(--radius);
+}
+
+/* Контейнер */
+.container {
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+/* Карточки */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5em;
+  box-shadow: var(--shadow);
+  margin-bottom: 2em;
+}
+
+/* Кнопки */
+button {
+  font-family: inherit;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+button:hover {
+  filter: brightness(0.9);
+}
+.btn-accent {
+  background: var(--color-accent);
+  color: white;
+}
+.auth-card {
+  max-width: 400px;
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+}
+.auth-card input {
+  margin-bottom: 0.75em;
+}
+.auth-card label {
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+}
+
+/* Инпуты и селекты */
+input, select, textarea {
+  font-family: inherit;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Две колонки */
+.two-cols {
+  display: flex;
+  gap: 1em;
+}
+
+/* Таблица */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+thead th {
+  background: #fff;
+  padding: 0.75em;
+  border-bottom: 2px solid #eee;
+  text-align: left;
+}
+tbody td {
+  padding: 0.75em;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Календарь отмеченные дни */
+.react-calendar__tile.has-training {
+  background: rgba(255,90,95,0.2);
+}
+
+/* Спойлер */
